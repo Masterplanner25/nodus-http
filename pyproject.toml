@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nodus-http"
+version = "0.1.0"
+description = "Outbound HTTP client with circuit breaker, retry, and OTel trace propagation"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Masterplanner25" }]
+dependencies = ["httpx>=0.24.0", "nodus-circuit-breaker>=0.1.0"]
+
+[project.optional-dependencies]
+otel  = ["opentelemetry-api>=1.0.0"]
+retry = ["tenacity>=8.0.0"]
+test  = ["pytest>=8.0", "pytest-asyncio>=0.21", "respx>=0.20.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nodus_http*"]
