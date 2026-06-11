@@ -6,7 +6,7 @@ Wraps `httpx` with optional circuit-breaker protection, configurable retry
 logic, and trace ID header injection. All integrations are constructor-injected
 — no globals or module-level configuration.
 
-> **Status:** v0.1.0 — prepared, not yet published.
+> **Status:** v0.1.0 — published on [PyPI](https://pypi.org/project/nodus-http/).
 
 ---
 
